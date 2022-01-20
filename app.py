@@ -1,3 +1,4 @@
+from re import M
 from flask import Flask, render_template
 import os
 
@@ -27,7 +28,7 @@ def home():
     finally:
         print("\nrun_sample done")
 
-    return render_template('testweb.html', data=data)
+    return render_template('testweb.html', data=data, settings=[HOST, MASTER_KEY, DATABASE_ID, CONTAINER_ID])
 
 if __name__ == '__main__':
     app.run()
