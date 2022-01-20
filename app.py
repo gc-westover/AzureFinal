@@ -18,6 +18,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
+    print('made it home')
     try:
         db = client.get_database_client(DATABASE_ID)
         container = db.get_container_client(CONTAINER_ID)
