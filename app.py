@@ -6,11 +6,17 @@ import azure.cosmos.exceptions as exceptions
 from azure.cosmos.partition_key import PartitionKey
 
 
+# settings = {
+#     'host': os.environ.get('ACCOUNT_URI'),
+#     'master_key': os.environ.get('ACCOUNT_KEY'),
+#     'database_id': os.environ.get('COSMOS_DATABASE'),
+#     'container_id': os.environ.get('COSMOS_CONTAINER'),
+# }
 settings = {
-    'host': os.environ.get('ACCOUNT_URI'),
-    'master_key': os.environ.get('ACCOUNT_KEY'),
-    'database_id': os.environ.get('COSMOS_DATABASE'),
-    'container_id': os.environ.get('COSMOS_CONTAINER'),
+    'host': 'https://gw-cc-az-cosmos.documents.azure.com:443/',
+    'master_key': '8fTvQj8ENlK016AwkIlDdRYpsYgV6736wrvAgW3G6ZkUeXyVM4s7mWxR5NCT689G3V0BHuh3C6Cfep8RIt3PjA==',
+    'database_id': 'ButtonTimes',
+    'container_id': 'Times'
 }
 
 HOST = settings['host']
