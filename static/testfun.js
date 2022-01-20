@@ -4,6 +4,7 @@ const appUrl = 'https://prod-05.northcentralus.logic.azure.com:443/workflows/897
 const date = new Date(Date.now());
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let x = axios.post(appUrl, {
+    id: self.crypto.getRandomValues(new Uint32Array(1))[0],
     month: months[date.getMonth()],
     day: date.getDate(),
     year: date.getFullYear(),
