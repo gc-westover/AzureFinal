@@ -25,9 +25,10 @@ def home():
         data = container.query_items(query='SELECT * FROM container', enable_cross_partition_query=True,)
     except exceptions.CosmosHttpResponseError as e:
         print('\nrun_sample has caught an error. {0}'.format(e.message))
-
+        data = []
     finally:
         print("\nrun_sample done")
+
     return render_template('testweb.html', data=data)
 
 if __name__ == '__main__':
