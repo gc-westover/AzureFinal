@@ -12,7 +12,7 @@ MASTER_KEY = os.environ.get('ACCOUNT_KEY'),
 DATABASE_ID = os.environ.get('COSMOS_DATABASE'),
 CONTAINER_ID = os.environ.get('COSMOS_CONTAINER'),
 
-client = cosmos_client.CosmosClient(HOST, {'masterKey': MASTER_KEY} )
+# client = cosmos_client.CosmosClient(HOST, {'masterKey': MASTER_KEY} )
 
 app = Flask(__name__)
 
