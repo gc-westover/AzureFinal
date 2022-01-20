@@ -29,7 +29,7 @@ def home():
     finally:
         print("\nrun_sample done")
     data = {}
-    return render_template('testweb.html', data=data)
+    return render_template('testweb.html', data=data, config=config)
 
 if __name__ == '__main__':
     app.run()
