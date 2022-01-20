@@ -16,5 +16,3 @@ let x = axios.post(appUrl, {
     console.log(response);
     return response.data
   });}
-
-console.log(x);
