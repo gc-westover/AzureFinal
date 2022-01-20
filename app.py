@@ -7,10 +7,10 @@ import azure.cosmos.exceptions as exceptions
 from azure.cosmos.partition_key import PartitionKey
 
 
-HOST = os.environ['ACCOUNT_URI'][0],
-MASTER_KEY = os.environ['ACCOUNT_KEY'][0],
-DATABASE_ID = os.environ['COSMOS_DATABASE'][0],
-CONTAINER_ID = os.environ['COSMOS_CONTAINER'][0],
+HOST = os.environ['ACCOUNT_URI'],
+MASTER_KEY = os.environ['ACCOUNT_KEY'],
+DATABASE_ID = os.environ['COSMOS_DATABASE'],
+CONTAINER_ID = os.environ['COSMOS_CONTAINER'],
 # client = cosmos_client.CosmosClient(HOST, {'masterKey': MASTER_KEY} )
 
 app = Flask(__name__)
