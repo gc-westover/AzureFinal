@@ -23,7 +23,7 @@ def home():
     try:
         db = client.get_database_client(DATABASE_ID)
         container = db.get_container_client(CONTAINER_ID)
-        data = container.query_items(query='SELECT * FROM container ORDER BY container.second DESC', enable_cross_partition_query=True,)
+        data = container.query_items(query='SELECT * FROM container', enable_cross_partition_query=True,)
     except exceptions.CosmosHttpResponseError as e:
         print('\nrun_sample has caught an error. {0}'.format(e.message))
     finally:
