@@ -9,7 +9,8 @@
 </head>
 <body>
   <button onclick="testfun()">Click Me</button>
-  {% for time in data %}
+  <h3>The button has been pressed {{len(data)}} times</h3>
+  {% for time in data[::-1] %}
     <p>Date: {{time.month}}, {{time.day}} {{time.year}}, {{time.hour}}:{{time.minute}}:{{time.second}}</p>
   {% endfor %}
   {% for setting in settings %}
